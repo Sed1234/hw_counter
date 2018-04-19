@@ -28,25 +28,9 @@ void counter::setCnt(int z, int f)
 	}
 	if (counter::getMin() == 0)
 	{
-		if (z <= counter::getMax())
-		{
-			_cnt = z + counter::getMin();
-			cnt = _cnt;
+		_cnt = (z + counter::getMin())% (counter::getMax()+1);
+		cnt = _cnt;
 		}
-		else if (z > counter::getMax())
-		{
-			if(z%getMax()==1)
-			_cnt = counter::getMax();
-			if(z%getMax() == 2)
-				_cnt = counter::getMin();
-			else {
-				_cnt = z - (counter::getMax())*f + counter::getMin();
-			}
-
-			cnt = _cnt;
-		}
-
-	}
 }
 int counter::getCnt() {
 	

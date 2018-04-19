@@ -14,7 +14,7 @@ int main() {
 		{
 			double s = 0.0;
 			s = inside_counter / cnt_.getMax();
-			cout << "s=  " << s << "   " << inside_counter << endl;
+		//	cout << "s=  " << s << "   " << inside_counter << endl;
 			cnt_.setCnt(inside_counter,s);
 			++inside_counter;
 		
