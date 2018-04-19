@@ -2,7 +2,7 @@
 #include "counter.h"
 using namespace std;
 int main() {
-	int n = 0, inside_counter = 0;
+	double n = 0, inside_counter = 0.0;
 	counter cnt_;
 	cnt_.setMin();
 	cnt_.setMax();
@@ -12,17 +12,8 @@ int main() {
 		cin >> n;
 		if (n == 0)
 		{
-
-			int s = 0;
-			if (cnt_.getMin() > 0)
-			{
-				s = inside_counter / cnt_.getMax();
-			}
-			else if (cnt_.getMin() == 0)
-			{
-				s = (inside_counter) % cnt_.getMax();
-
-			}
+			double s = 0.0;
+			s = inside_counter / cnt_.getMax();
 			cout << "s=  " << s << "   " << inside_counter << endl;
 			cnt_.setCnt(inside_counter,s);
 			++inside_counter;

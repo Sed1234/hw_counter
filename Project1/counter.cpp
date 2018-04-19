@@ -35,7 +35,14 @@ void counter::setCnt(int z, int f)
 		}
 		else if (z > counter::getMax())
 		{
-			_cnt = f + counter::getMin();
+			if(z%getMax()==1)
+			_cnt = counter::getMax();
+			if(z%getMax() == 2)
+				_cnt = counter::getMin();
+			else {
+				_cnt = z - (counter::getMax())*f + counter::getMin();
+			}
+
 			cnt = _cnt;
 		}
 
